@@ -18,3 +18,20 @@ func TestReverse(t *testing.T) {
 		}
 	}
 }
+
+func TestCount(t *testing.T) {
+	tests := []struct {
+		input string
+		expected int
+	}{
+		{"one", 3},
+		{"hello there", 11},
+		{"1235", 4},
+	}
+	for _, test := range tests {
+		result := count(test.input)
+		if result != test.expected {
+			t.Errorf("Count(%s) = %d, expected %d", test.input, result, test.expected)
+		}
+	}
+}

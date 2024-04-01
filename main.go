@@ -7,6 +7,7 @@ import (
 
 func main() {
 	fmt.Println(reverse("nice try"))
+	fmt.Println(count("nice try"))
 }
 
 func reverse(s string) string {
@@ -17,4 +18,13 @@ func reverse(s string) string {
 	}
 
 	return strings.Join(slice, "")
+}
+
+func count(s string) int {
+	slice := strings.Split(s, "")
+	n := 0
+	for i := 0; i <= len(slice) - 1; i++ {
+		n++
+	}
+	return n
 }
